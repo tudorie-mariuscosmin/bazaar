@@ -42,3 +42,10 @@ nav ul li a i {
 nav ul li a.selected{
     color:#2291ff
 }
+
+#wave{
+    position: absolute;
+    z-index: -20;
+    bottom:0;
+    padding-bottom: 7vh;
+}

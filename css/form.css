@@ -1,0 +1,155 @@
+.container{
+    width: 50vw;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.circle{
+    background-color: #dadde1;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 10px;
+    z-index: 2;
+    box-shadow: 1px 2px 4px #888888;
+}
+
+.form{
+    width: 100%;
+    margin: auto;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 2px 5px gray;
+    border-radius: 30px;
+    padding-top: 50px;
+    position: relative;
+    top:-40px;
+    background-color: white;
+}
+
+.circle img{
+    width: 80%;
+    height: 80%;
+    position: relative;
+    top:5px;
+}
+
+#type-select{
+    border: none;
+    border-bottom: 2px solid #585c5e;
+    color: #283033;
+    margin-bottom: 10px;
+}
+#type-select:focus{
+    border:none;
+    border-bottom: 3px solid #2291ff;
+    outline: none;
+    font-weight: bold;
+   
+}
+#list-name{
+    width: 40%;
+    height:30px;
+    font-size: large;
+    border: none;
+    border-bottom: 2px solid #585c5e;
+    margin-bottom: 20px;
+}
+#list-name:focus{
+    border:none;
+    border-bottom: 3px solid #2291ff;
+    outline: none;
+}
+.items-title{
+    position: relative;
+    top:10px;
+    background-color: white;
+    font-size: large;
+    font-weight: 300;
+}
+
+.items{
+    width:80%;
+    border:2px solid  #dadde1;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height:50vh;
+    overflow-y: scroll;
+}
+
+.items ul{
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.items ul li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: large;
+    padding: 5px;
+    border-bottom: 1px solid black;
+}
+
+.items ul li i:hover{
+    color: red;
+    cursor: pointer;
+}
+
+#addItem{
+    font-size: large;
+    margin-bottom: 15px;
+    border:none;
+    border-bottom: 2px solid #585c5e;
+}
+
+#addItem:focus{
+    border:none;
+    border-bottom: 2px solid  #2291ff;
+    outline: none;
+}
+.add-item i:hover{
+   color:  #2291ff;
+   cursor: pointer;
+}
+#addBtn{
+    margin: 10px;
+    background-color: #2291ff;
+    color: white;
+    border: none;
+    font-size: large;
+    padding: 5px 25px;
+}
+
+
+
+
+
+
+/* for phones */
+@media only screen and (max-width: 600px) {
+    .container{
+        width:95vw
+    }
+
+    .circle img{
+        width: 20vw;  
+    }
+    #list-name{
+        width: 70%;
+    }
+    
+    
+} 
