@@ -14,6 +14,7 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="css/form.css">
+
 </head>
 
 <body>
@@ -48,7 +49,7 @@
 
     <div class="container">
         <div class="circle">
-            <img src="/img/img-market/png/005-basket.png" alt="type">
+            <img src="/img/img-market/png/005-basket.png" id="typeImg" alt="type">
         </div>
         <div class="form">
             <select id="type-select">
@@ -61,23 +62,21 @@
             <input id="list-name" type="text" placeholder="List Name" />
             <h5 class="items-title">Items</h5>
             <div class="items">
-                <ul>
-                    <li>Bread
-                        <i class="fas fa-trash"></i>
-                    </li>
-                    <li>Bread
-                        <i class="fas fa-trash"></i>
-                    </li>
+                <div>
+                    <ul id="itemList">
+                        <li>Bread
+                            <i class="fas fa-trash"></i>
+                        </li>
+                        <li>Bread
+                            <i class="fas fa-trash"></i>
+                        </li>
 
-
-
+                    </ul>
                     <div class="add-item">
                         <input type="text" placeholder="Add Item" id="addItem" />
-                        <i class="fas fa-plus-square fa-2x"></i>
+                        <i class="fas fa-plus-square fa-2x" id="addItemBtn"></i>
                     </div>
-
-
-                </ul>
+                </div>
 
             </div>
             <input id="addBtn" type="button" value="Add List" />
@@ -91,7 +90,7 @@
     </svg>
 
 
-
+    <script src="js/form.js" defer></script>
 </body>
 
 </html>

@@ -60,7 +60,6 @@
     font-size: large;
     border: none;
     border-bottom: 2px solid #585c5e;
-    margin-bottom: 20px;
 }
 #list-name:focus{
     border:none;
@@ -82,12 +81,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height:50vh;
+    height:51vh;
     overflow-y: scroll;
 }
 
 .items ul{
-    height: 100%;
     list-style: none;
     display: flex;
     flex-direction: column;
