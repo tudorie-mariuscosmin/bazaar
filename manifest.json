@@ -1,0 +1,25 @@
+{
+    "short_name": "Bazaar",
+    "name": "Bazaar Shopping list",
+    "description": "Multimedia project app",
+    "icons": [
+        {
+            "src": "icons/manifest-icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable any"
+        },
+        {
+            "src": "icons/manifest-icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable any"
+        }
+    ],
+    "start_url": "index.html",
+    "background_color": "#2291ff",
+    "display": "fullscreen",
+    "orientation": "portrait",
+    "scope": "/",
+    "theme_color": "#2291ff"
+}

@@ -6,8 +6,10 @@ const addItemBtn = document.getElementById('addItemBtn')
 const addListBtn = document.getElementById('addBtn')
 const listName = document.getElementById('list-name')
 
-const items = []
 
+const lists = getAllLists()
+console.log(lists);
+const items = []
 
 
 const changeTypeImgSrc = (img) => {
@@ -56,19 +58,15 @@ addItemBtn.onclick = () => {
 
 }
 
+
 addListBtn.onclick = () => {
-    let lists = localStorage.getItem('lists')
     let list = {
         name: listName.value,
         type: typeSelect.value,
         items
     }
-    if (lists) {
-        lists = JSON.parse(lists)
-    } else {
-        lists = []
-    }
-    lists.push(list)
-    localStorage.setItem('lists', JSON.stringify(lists))
+    addList(list)
+    window.location.replace('./lists.html')
+
 }
 
