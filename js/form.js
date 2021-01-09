@@ -7,8 +7,6 @@ const addListBtn = document.getElementById('addBtn')
 const listName = document.getElementById('list-name')
 
 
-const lists = getAllLists()
-console.log(lists);
 const items = []
 
 
