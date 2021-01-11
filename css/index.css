@@ -3,6 +3,7 @@ html{
 }
 body{
     text-align: center;
+    height: 100%;
 }
 .header{
     display: flex;
@@ -14,6 +15,11 @@ body{
     animation: wheel 2s linear infinite;
     transform-origin: center;
     transform-box: fill-box;
+}
+
+#statsCanvas{
+    width:50%;
+    height:50vh;
 }
 
 @keyframes wheel{
@@ -52,7 +58,13 @@ body{
     }
 }
 
+@media only screen and (max-width: 600px){
+    #statsCanvas{
+        width:95%;
+        height:50vh
+    }
 
+}
 
 
 

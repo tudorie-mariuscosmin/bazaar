@@ -76,7 +76,7 @@ const editList = (index) => {
     img.src = getImgSrcFromListType(list.type)
     title.innerHTML = list.name;
     type.innerHTML = list.type;
-    finishedPrev.innerHTML = list.finished ? `<i class="fas fa-check" style="color:green"></i> Complete` : `<iclass="fas fa-times" style="color:red"></iclass=> Unfinished`
+    finishedPrev.innerHTML = list.finished ? `<i class="fas fa-check" style="color:green"></i> Complete` : `<i class="fas fa-times" style="color:red"></i> Unfinished`
     itemsList.innerHTML = "";
     list.items.forEach(item => {
         itemsList.innerHTML += `<li>

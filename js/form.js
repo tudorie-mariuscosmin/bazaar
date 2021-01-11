@@ -112,10 +112,14 @@ const addItemListener = () => {
 
 
 addListBtn.onclick = () => {
+    const date = new Date();
+
     let list = {
         name: listName.value,
         type: typeSelect.value,
         finished: false,
+        day: date.getDate(),
+        month: date.getMonth(),
         items
     }
     addList(list)
