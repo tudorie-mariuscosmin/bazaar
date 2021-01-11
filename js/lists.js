@@ -35,6 +35,9 @@ displayLists = () => {
                 </div>
                 <div class="btn-container">
                     <button class="btn" onclick="editList(${index})">Show more</button>
+                    <div class="finished">
+                    ${list.finished ? `<i class="fas fa-check" style="color:green"></i> Complete` : `<i class="fas fa-times" style="color:red"></i> Unfinished`}
+                    </div>
                 </div>
     
             </div>
@@ -42,7 +45,6 @@ displayLists = () => {
         `
         });
     } else {
-        console.log('ajunge aici')
         listsDiv.innerHTML = `<div class="no-lists">
         <i class="far fa-sad-tear fa-5x"></i>
         You don't have any shopping lists
@@ -67,10 +69,14 @@ const editList = (index) => {
     const itemsList = document.getElementById('items-list')
     const btnDelete = document.getElementById('btn-delete')
     const btnMark = document.getElementById('btn-mark')
+    const priceInput = document.getElementById('price');
+    const finishedPrev = document.getElementById('finished-prev')
+
 
     img.src = getImgSrcFromListType(list.type)
     title.innerHTML = list.name;
     type.innerHTML = list.type;
+    finishedPrev.innerHTML = list.finished ? `<i class="fas fa-check" style="color:green"></i> Complete` : `<iclass="fas fa-times" style="color:red"></iclass=> Unfinished`
     itemsList.innerHTML = "";
     list.items.forEach(item => {
         itemsList.innerHTML += `<li>
@@ -79,10 +85,20 @@ const editList = (index) => {
     </li>`
     })
 
+    priceInput.value = list.price ? list.price : null;
+
 
     showLess.onclick = closePreviewList
     btnDelete.onclick = () => {
         deleteList(index)
+        closePreviewList()
+        displayLists()
+    }
+
+    btnMark.onclick = () => {
+        list.finished = true;
+        list.price = priceInput.value;
+        updateList(list, index)
         closePreviewList()
         displayLists()
     }

@@ -32,3 +32,9 @@ function deleteList(index) {
 
 }
 
+function updateList(list, index) {
+    const lists = getAllLists();
+    lists[index] = list
+    localStorage.setItem('lists', JSON.stringify(lists))
+}
+

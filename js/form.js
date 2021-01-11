@@ -61,6 +61,7 @@ addListBtn.onclick = () => {
     let list = {
         name: listName.value,
         type: typeSelect.value,
+        finished: false,
         items
     }
     addList(list)
