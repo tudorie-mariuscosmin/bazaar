@@ -1,0 +1,161 @@
+
+.body{
+    width: 100%;
+    height:100%
+}
+.lists{
+    width: 100%;
+    height: 90vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.list{
+    margin: 1%;
+    padding: 1%;
+    width: 50%;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+    box-shadow: 1px 2px 4px #888888;
+    border-radius: 20px;
+}
+
+.list-img-container{
+    width: 10%;
+    padding: 2%;
+    background-color: #dadde1;
+    border-radius: 50%;
+}
+.list-img{
+    width: 100%;
+}
+
+.list-info{
+    margin-right: 5px;
+    margin-left: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.list-title{
+    font-size: x-large;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.list-type{
+    font-size: medium;
+    margin: 5px;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    background-color: #2291ff;
+    color: white;
+    font-size: large;
+    font-weight: 300;
+    width:fit-content;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+
+
+.preview-list{
+    width: 50%;
+    height: 89vh;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 1px 2px 4px #888888;
+    display: none;
+    flex-direction: column;
+    border-radius: 25px;
+}
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+
+
+.items{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 60vh;
+    border:2px solid  #dadde1;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+}
+#items-list{
+    list-style: none;
+    margin: 5px;
+
+    width: 100%;
+}
+
+#items-list li{
+    margin:10px
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-prev{
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+}
+.delete{
+    background-color: red;
+}
+.mark{
+   background-color: #2291ff;
+}
+
+.price{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+/* phones */
+@media only screen and (max-width: 600px) {
+
+    .list{
+        width: 90%;
+    }
+
+    .list-img-container{
+        width: 20%;
+    }
+
+    .list-title{
+        font-size: large;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    .btn-more{
+        font-size: medium;
+        border-radius: 5px;
+        padding: 5px;
+    }
+    
+    
+} 

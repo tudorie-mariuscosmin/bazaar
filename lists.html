@@ -12,6 +12,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100&display=swap"
         rel="stylesheet">
+
+    <link rel="stylesheet" href="css/lists.css">
 </head>
 
 <body>
@@ -47,10 +49,71 @@
 
 
     <div class="lists">
-        <div class="list">
+        <!-- <div class="list">
+            <div class="list-img-container">
+                <img src="img/img-market/png//005-basket.png" class="list-img" />
+            </div>
+            <div class="list-info">
+                <div class="list-title"> List Title</div>
+                <div class="list-type">List type</div>
+            </div>
+            <div class="btn-container">
+                <button class="btn-more">Show more</button>
+            </div>
 
+        </div> -->
+    </div>
+
+
+    <div class="preview-list">
+        <div class="header">
+            <div class="list-img-container">
+                <img id="img" src="img/img-market/png//005-basket.png" class="list-img" />
+            </div>
+            <div class="list-info">
+                <div id="title" class="list-title"> List Title</div>
+                <div id="type" class="list-type">List type</div>
+            </div>
+            <div class="btn-container">
+                <button id="btn-less" class="btn">Show less</button>
+            </div>
+        </div>
+        <div class="main-info">
+            <div class="items">
+                <ul id="items-list">
+                    <li>
+                        <input type="checkbox" /> apa
+                    </li>
+                    <li>
+                        <input type="checkbox" /> paine
+                    </li>
+                    <li>
+                        <input type="checkbox" /> lapte
+                    </li>
+                    <li>
+                        <input type="checkbox" /> cascaval
+                    </li>
+                </ul>
+            </div>
+            <div class="price">
+                <label for="price">Price</label>
+                <input type="number" id="price" />
+            </div>
+            <div class="buttons">
+                <div id="btn-delete" class="btn-prev delete">
+                    <i class="fas fa-trash-alt"></i>
+                    Delete List
+                </div>
+                <div id="btn-mark" class="btn-prev mark">
+                    <i class="fas fa-clipboard-check"></i>
+                    Mark complete
+                </div>
+            </div>
         </div>
     </div>
+
+
+
 
     <script>
         window.onload = () => {
