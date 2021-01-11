@@ -5,7 +5,59 @@ const addItemInput = document.getElementById('addItem')
 const addItemBtn = document.getElementById('addItemBtn')
 const addListBtn = document.getElementById('addBtn')
 const listName = document.getElementById('list-name')
+const micBtn = document.getElementById('micBtn')
 
+let recognitionOn = false;
+console.log(navigator.userAgent)
+let i = 0;
+if (navigator.userAgent.indexOf("Chrome") !== -1 || navigator.userAgent.indexOf("Android") !== -1) {
+    console.log("chrome")
+    const speechRecog = new webkitSpeechRecognition();
+    speechRecog.lang = "en";
+    speechRecog.continuous = true;
+    speechRecog.maxAlternatives = 1;
+
+    micBtn.onclick = () => {
+        if (recognitionOn) {
+            speechRecog.stop();
+            recognitionOn = false;
+            i = 0;
+            micBtn.style = ""
+        } else {
+            speechRecog.start();
+            recognitionOn = true
+            micBtn.style = "color:red;"
+        }
+    }
+
+    let result;
+
+    speechRecog.onresult = (ev) => {
+        result = ev.results[i][0].transcript.trim();
+        console.log(result)
+        if (ev.results[i].isFinal) {
+            if (result.substring(0, 3).toLowerCase() === "add") {
+                addItemInput.value += result.split(" ").splice(1, 1);
+                addItemListener()
+            }
+            if (result.substring(0, 6).toLowerCase() === "delete") {
+
+                if (items.indexOf(result.split(' ').splice(1, 1).toString()) !== -1) {
+                    let index = items.indexOf(result.split(' ').splice(1, 1).toString())
+                    console.log(index)
+                    deleteItem(index)
+                }
+
+            }
+            i++;
+        }
+    }
+
+
+
+} else {
+    micBtn.style = "display:none"
+}
 
 const items = []
 
@@ -47,7 +99,9 @@ const displayItems = () => {
 
 displayItems()
 
-addItemBtn.onclick = () => {
+addItemBtn.onclick = () => { addItemListener() }
+
+const addItemListener = () => {
     if (addItemInput.value !== '') {
         items.push(addItemInput.value)
         addItemInput.value = '';
