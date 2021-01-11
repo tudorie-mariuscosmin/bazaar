@@ -1,25 +1,58 @@
-.header{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+html{
+    width: 100%;
 }
-.logo{
-    margin-top: 10%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
-
-.logo-img{
-    width: 30%;
-}
-
 body{
     text-align: center;
 }
+.header{
+    display: flex;
+    flex-direction: column;
+
+}
+
+#backWeel, #frontWeel{
+    animation: wheel 2s linear infinite;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@keyframes wheel{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+#Products{
+    animation: productsJump 1s alternate-reverse infinite ;
+}
+
+@keyframes productsJump{
+    from{
+        transform: translateY(0%);
+    }
+    to{
+        transform: translateY(-4%);
+    }
+}
+
+#Cart{
+    animation: cartMove 1s alternate-reverse infinite;
+
+}
+
+@keyframes cartMove{
+    from{
+        transform: translateY(0%) rotate(1deg);
+    }
+    to{
+        transform: translateY(-1%) rotate(-1.5deg);
+    }
+}
+
+
 
 
 
