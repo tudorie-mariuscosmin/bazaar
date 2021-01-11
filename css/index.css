@@ -17,10 +17,6 @@ body{
     transform-box: fill-box;
 }
 
-#statsCanvas{
-    width:50%;
-    height:50vh;
-}
 
 @keyframes wheel{
     from{
@@ -58,13 +54,6 @@ body{
     }
 }
 
-@media only screen and (max-width: 600px){
-    #statsCanvas{
-        width:95%;
-        height:50vh
-    }
-
-}
 
 
 

@@ -13,6 +13,9 @@ let i = 0;
 if (navigator.userAgent.indexOf("Chrome") !== -1 || navigator.userAgent.indexOf("Android") !== -1) {
     console.log("chrome")
     const speechRecog = new webkitSpeechRecognition();
+    const say = text => {
+        speechSynthesis.speak(new SpeechSynthesisUtterance(text));
+    }
     speechRecog.lang = "en";
     speechRecog.continuous = true;
     speechRecog.maxAlternatives = 1;
@@ -25,6 +28,7 @@ if (navigator.userAgent.indexOf("Chrome") !== -1 || navigator.userAgent.indexOf(
             micBtn.style = ""
         } else {
             speechRecog.start();
+            say("What do you want to add?")
             recognitionOn = true
             micBtn.style = "color:red;"
         }
@@ -37,15 +41,17 @@ if (navigator.userAgent.indexOf("Chrome") !== -1 || navigator.userAgent.indexOf(
         console.log(result)
         if (ev.results[i].isFinal) {
             if (result.substring(0, 3).toLowerCase() === "add") {
-                addItemInput.value += result.split(" ").splice(1, 1);
+                addItemInput.value += result.split(" ").splice(1, 1).toString().toLowerCase();
                 addItemListener()
+                say("item added")
             }
             if (result.substring(0, 6).toLowerCase() === "delete") {
 
-                if (items.indexOf(result.split(' ').splice(1, 1).toString()) !== -1) {
-                    let index = items.indexOf(result.split(' ').splice(1, 1).toString())
+                if (items.indexOf(result.split(' ').splice(1, 1).toString().toLowerCase()) !== -1) {
+                    let index = items.indexOf(result.split(' ').splice(1, 1).toString().toLowerCase())
                     console.log(index)
                     deleteItem(index)
+                    say(result.split(' ').splice(1, 1).toString() + "deleted")
                 }
 
             }
@@ -100,6 +106,11 @@ const displayItems = () => {
 displayItems()
 
 addItemBtn.onclick = () => { addItemListener() }
+addItemInput.addEventListener('keydown', (e) => {
+    if (e.key === "Enter") {
+        addItemListener()
+    }
+})
 
 const addItemListener = () => {
     if (addItemInput.value !== '') {

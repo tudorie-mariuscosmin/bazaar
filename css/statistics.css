@@ -1,0 +1,21 @@
+html{
+}
+.canvas-div{
+    width: 100%;
+    display: flex;
+}
+#statsCanvas{
+    width:50%;
+    height:50vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@media only screen and (max-width: 600px){
+    #statsCanvas{
+        width:95%;
+        height:50vh
+    }
+
+}
