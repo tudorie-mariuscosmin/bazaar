@@ -139,3 +139,13 @@ nav ul li a.selected{
     font-size: 22px;
 
 }
+
+
+@media only screen and (max-width: 600px){
+    nav ul li a i {
+        font-size: 1rem !important;
+    }
+    nav ul li a{
+        font-size: smaller;
+    }
+}

@@ -24,3 +24,11 @@ function getList(index) {
         return null
 }
 
+function deleteList(index) {
+    const lists = getAllLists();
+
+    lists.splice(index, 1);
+    localStorage.setItem('lists', JSON.stringify(lists))
+
+}
+
