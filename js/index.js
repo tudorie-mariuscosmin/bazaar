@@ -26,9 +26,9 @@ if (lists.length > 0) {
         if (index < messages.length) {
             ctx.fillStyle = "white"
             ctx.fillRect(0, 0, width, height)
-            ctx.font = "14px Verdana"
+            ctx.font = "13px Verdana"
             ctx.fillStyle = "black"
-            ctx.fillText(messages[index++], 0, 50)
+            ctx.fillText(messages[index++], 0, 10)
         } else {
             index = 0
         }
