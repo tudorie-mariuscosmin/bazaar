@@ -1,0 +1,70 @@
+.cupons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cupon-holder{
+    width: 50vw;
+    height: 12vh;
+    box-shadow: 1px 2px 4px #888888;
+    margin: 10px;
+    border-radius: 10px;
+}
+.cupon{
+    margin: auto;
+    display: flex;
+    width: 96%;
+    height: 96%;
+    box-shadow: 1px 1px 1px #888888;
+    flex-direction: column;
+    background-color:yellow ;
+    background-image: url('/img/paper-texture.png');
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.displayNone{
+    display: none;
+}
+
+.hovered{
+    border: 2px dashed grey;
+}
+
+.delete{
+    height: 10vh;
+    width: 55vw;
+    background-color: red;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: x-large;
+
+}
+
+.title{
+    font-size: x-large;
+    text-align: center;
+    margin: 10px;
+    font-family: 'Handlee', cursive;
+    font-weight: 300;
+
+}
+.info{
+    display: flex;
+    margin-top: 5px;
+    justify-content: space-around;
+}
+
+@media only screen and (max-width: 600px){
+    .cupon-holder{
+        width: 90vw;
+    }
+    .delete{
+        width: 95vw;
+    }
+}

@@ -4,18 +4,19 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Team</title>
+    <link rel="apple-touch-icon" href="icons/apple-icon-180.png">
+    <title>Cupons</title>
     <link rel="shortcut icon" href="img/img-market/png/030-grocery cart.png" type="image/x-icon">
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100&display=swap"
         rel="stylesheet">
 
-
-
-</head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/cupons.css">
 
 <body>
     <nav>
@@ -45,42 +46,30 @@
                 </a>
             </li>
             <li>
-                <a href="cupons.html">
+                <a class="selected">
                     Cupons
                     <i class="fas fa-ticket-alt"></i>
                 </a>
             </li>
         </ul>
     </nav>
-    <div class="team-section">
-        <h1>Our Team</h1>
-        <span class="border"></span>
 
-        <div class="ps">
-            <a href="#p1"><img src="img/img-team/tudi.png" alt=""></a>
-            <a href="#p2"><img src="img/img-team/eros.png" alt=""></a>
-
-
-
+    <div class="cupons">
+        <div class="cupon-holder">
         </div>
-
-        <div class="section" id="p1">
-            <span class="name">Tudorie Marius</span>
-            <span class="border"></span>
-            <p>
-                Hey, My name is Marius! I am passionate about IT.
-            </p>
-        </div>
-
-        <div class="section" id="p2">
-            <span class="name">Teodorescu Eros</span>
-            <span class="border"></span>
-            <p>
-                Hey, My name is Eros! I am passionate about IT.
-            </p>
+        <div class="cupon-holder"></div>
+        <div class="cupon-holder"></div>
+        <div class="cupon-holder"></div>
+        <div class="cupon-holder"></div>
+        <div class="delete">
+            <i class="fas fa-trash-alt"></i>
+            Delete cuppon
         </div>
 
     </div>
+
+
+
 
     <script>
         window.onload = () => {
@@ -89,9 +78,9 @@
             }
         }
     </script>
+    <script src="js/main.js" defer></script>
+    <script src="js/cupons.js" defer></script>
 
-    <script src="js/main.js"></script>
-    <script src="js/storageService.js" defer></script>
 </body>
 
 </html>
