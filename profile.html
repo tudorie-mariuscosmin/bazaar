@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,100&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="css/profile.css">
 </head>
 
 <body>
@@ -43,14 +44,46 @@
                 <i class="far fa-user-circle fa-lg"></i>
             </a>
         </li>
-        <li>
-            <a href="team.html">
-                Team
-                <i class="far fa-user-circle fa-lg"></i>
-            </a>
-        </li>
     </ul>
 </nav>
+
+
+<div class="profile-container">
+    <div class="picture-container">
+        <img src="img/img-avatars/avatar-man.JPG" class="profile-pic" />
+    </div>
+    <div class="selects">
+        <select id="gender-select" class="select">
+            <option selected>Man</option>
+            <option>Woman</option>
+        </select>
+        <select id="filter-select" class="select">
+            <option>No Filter</option>
+            <option>Filter a</option>
+            <option>Filter b</option>
+        </select>
+    </div>
+    <div class="name-input">
+        <Label for="nameInput">Name</Label>
+        <input type="text" id="nameInput" class="input" placeholder="ex: John Doe">
+
+    </div>
+    <button class="button save">
+        <i class="far fa-save"></i>
+        Save</button>
+    <div class="page-btn">
+        <a href="statistics.html" class="button">
+            <i class="fas fa-chart-line"></i>
+            Statistics
+        </a>
+        <a href="team.html" class="button">
+            <i class="fas fa-users"></i>
+            Team</a>
+    </div>
+
+
+
+</div>
 
 
 <script>

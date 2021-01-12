@@ -1,0 +1,99 @@
+.profile-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.picture-container{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px 1px 1px 1px #9e9d9d;
+    border-radius: 50%;
+    padding: 2%;
+    margin-top: 20px;
+}
+
+.profile-pic{
+    width:60%;
+}
+
+.selects{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    margin-top: 10px;
+}
+.select{
+    border: none;
+    border-bottom: 2px solid #585c5e;
+    color: #283033;
+    margin-bottom: 10px;
+}
+.select:focus{
+    border:none;
+    border-bottom: 3px solid #2291ff;
+    outline: none;
+    font-weight: bold;
+}
+
+.name-input{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+.input{
+    
+    height:30px;
+    font-size: large;
+    border: none;
+    border-bottom: 2px solid #585c5e;
+}
+
+.input:focus{
+    border:none;
+    border-bottom: 3px solid #2291ff;
+    outline: none;
+}
+.button{ 
+    margin: 10px;
+    background-color: #2291ff;
+    color: white;
+    border: none;
+    font-size: large;
+    padding: 5px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    
+}
+.save{
+    width: 15%;
+}
+.page-btn{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media only screen and (max-width: 600px){
+    .picture-container{
+        width: 50%;
+    }
+    .profile-pic{
+        width: 50%;
+    }
+    .selects{
+        width: 50%;
+    }
+    .name-input{
+        width: 50%;
+    }
+
+    .save{
+        width: 40%;
+    }
+
+    .page-btn{
+        width: 90%;
+    }
+}
