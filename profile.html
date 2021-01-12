@@ -58,14 +58,17 @@
             <option>Woman</option>
         </select>
         <select id="filter-select" class="select">
-            <option>No Filter</option>
-            <option>Filter a</option>
-            <option>Filter b</option>
+            <option selected>No Filter</option>
+            <option>Black and white</option>
+            <option>Sepia</option>
+            <option>Invert</option>
+            <option>Hue Rotate</option>
         </select>
     </div>
     <div class="name-input">
         <Label for="nameInput">Name</Label>
         <input type="text" id="nameInput" class="input" placeholder="ex: John Doe">
+        <div id="errormsg" style="display: none;">You need to add a name</div>
 
     </div>
     <button class="button save">
@@ -95,5 +98,6 @@
 </script>
 
 <script src="js/main.js" defer></script>
+<script src="js/profile.js" defer></script>
 
 </html>
